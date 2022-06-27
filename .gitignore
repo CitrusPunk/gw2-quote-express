@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # Ignor Database configuration to hide password
-./app/config/db.config.js
+app/config/db.config.js
