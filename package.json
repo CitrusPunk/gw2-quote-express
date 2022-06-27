@@ -1,0 +1,34 @@
+{
+  "name": "gw2-quote-express",
+  "version": "1.0.0",
+  "description": "nodejs rest api with express to fetch data from postgresql saving gw2 quotes and authors",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CitrusPunk/gw2-quote-express.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "postgresql",
+    "rest",
+    "api"
+  ],
+  "author": "CitrusPunk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CitrusPunk/gw2-quote-express/issues"
+  },
+  "homepage": "https://github.com/CitrusPunk/gw2-quote-express#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.1"
+  }
+}
