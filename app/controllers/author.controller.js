@@ -21,7 +21,7 @@ exports.create = (req, res) => {
     description: req.body.description,
   };
   // Save Author in database
-  Quote.create(quote)
+  Author.create(author)
     .then((data) => res.send(data))
     .catch((err) =>
       res.status(500).send({
@@ -35,7 +35,7 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
   const name = req.query.name; // TODO: maybe adjust to search all attributes
   var condition = name ? { name: { [Op.iLike]: `%${name}%` } } : null;
-  Quote.findAll({ where: condition })
+  Author.findAll({ where: condition })
     .then((data) => {
       res.send(data);
     })
@@ -49,7 +49,7 @@ exports.findAll = (req, res) => {
 // Find a single Author with an id
 exports.findOne = (req, res) => {
   const id = req.params.id;
-  Quote.findByPk(id)
+  Author.findByPk(id)
     .then((data) => {
       if (data) {
         res.send(data);
