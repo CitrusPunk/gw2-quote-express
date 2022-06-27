@@ -20,7 +20,9 @@ db.sequelize.sync({ force: true }).then(() => {
 app.get("/", (req, res) => {
   res.json({ message: "GW2 Quoter" });
 });
+
 require("./app/routes/quotes.routes")(app);
+require("./app/routes/authors.routes")(app);
 
 
 // set port and listen for requests
