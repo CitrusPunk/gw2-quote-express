@@ -1,10 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
 const app = express();
+
+const url = "http://localhost";
+const port = "8081"
 var corsOptions = {
-  origin: "http://localhost:8081"
+  origin: `${url}:${port}`,
 };
 
 // USE
@@ -13,9 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = require("./app/models");
-db.sequelize.sync({ force: true }).then(() => {
-    console.log("Drop and re-sync db.");
-  });
+db.sequelize.sync();
 // ROUTES
 app.get("/", (req, res) => {
   res.json({ message: "GW2 Quoter" });
